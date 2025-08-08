@@ -40,7 +40,7 @@ Python 3.10.12
 Dependencies
 Install the required Python packages using pip:
 
-& pip install numpy opencv-python mavsdk rclpy
+$ pip install numpy opencv-python mavsdk rclpy
 
 Configuration
 Camera Intrinsics: The CAMERA_MATRIX in tree_detector.py is configured for the simulated camera. If you use a different camera, you will need to update these values.
@@ -54,11 +54,11 @@ Start the PX4-Gazebo Simulation:
 Open a terminal and launch the PX4 SITL environment with a world that contains obstacles (e.g., a forest or trees).
 
 # Make sure you are in the PX4-Autopilot directory
-& make px4_sitl gazebo
+$ make px4_sitl gazebo
 
 Run the Main Application:
 In a new terminal, navigate to the project directory and run the main.py script.
 
-python3 main.py
+$ python3 main.py
 
 The drone will then arm, take off, and begin its autonomous navigation routine. An OpenCV window titled "frame" will appear, showing the drone's camera feed with detected obstacles and the current flight state.
