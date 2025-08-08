@@ -3,7 +3,7 @@ Drone navigation in a forest-type environment, where the drone detects gaps betw
 Autonomous Drone Navigation in Forest Environment
 This project enables a drone to autonomously navigate through a simulated forest environment, avoiding trees using a combination of computer vision for obstacle detection and advanced flight control. The system is designed for use with the PX4-Autopilot and the Gazebo simulator.
 
-📖 Overview
+# Overview
 The project is composed of three main Python scripts that work in concert:
 
 tree_detector.py: This script uses ROS2 and OpenCV to process RGB and depth images from the drone's camera. It identifies tree trunks based on color (HSV thresholding) and calculates their distance. Its primary function is to detect the widest navigable gap between trees and identify any immediate obstacles.
@@ -12,7 +12,7 @@ drone_controller.py: This is the "brain" of the drone. It takes the gap and obst
 
 main.py: This is the entry point of the application. It initializes both the tree detector and the drone controller, running them in separate threads to ensure that image processing and flight control can happen concurrently.
 
-✨ Key Features
+# Key Features
 Autonomous Navigation: The drone can take off, navigate through a series of obstacles, and land on its own.
 
 Vision-Based Obstacle Avoidance: Uses an RGB-D camera to detect trees and find safe paths.
@@ -25,7 +25,7 @@ Stuck Detection & Fallback: Uses optical flow to determine if it's stuck. If so,
 
 ROS2 and MAVSDK Integration: Seamlessly integrates with standard drone simulation and control tools.
 
-🛠️ Setup and Installation
+ Setup and Installation
 Prerequisites
 Ubuntu 22.04 
 
@@ -35,12 +35,12 @@ PX4-Autopilot
 
 Gazebo Simulator with the PX4 SITL (Software In The Loop) environment.
 
-Python 3.8+
+Python 3.10.12
 
 Dependencies
 Install the required Python packages using pip:
 
-pip install numpy opencv-python mavsdk rclpy
+& pip install numpy opencv-python mavsdk rclpy
 
 Configuration
 Camera Intrinsics: The CAMERA_MATRIX in tree_detector.py is configured for the simulated camera. If you use a different camera, you will need to update these values.
@@ -51,10 +51,10 @@ ROS Topics: The script subscribes to /camera/image_raw and /camera/depth/image_r
 
 How to Run
 Start the PX4-Gazebo Simulation:
-Open a terminal and launch the PX4 SITL environment with a world that contains obstacles (e.g., a forest).
+Open a terminal and launch the PX4 SITL environment with a world that contains obstacles (e.g., a forest or trees).
 
 # Make sure you are in the PX4-Autopilot directory
-make px4_sitl gazebo
+& make px4_sitl gazebo
 
 Run the Main Application:
 In a new terminal, navigate to the project directory and run the main.py script.
