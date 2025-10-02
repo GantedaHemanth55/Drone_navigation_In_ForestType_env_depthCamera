@@ -1,4 +1,4 @@
-# Drone_navigation_In_ForestType_env_depthCamera
+# Autnomous Drone Navigation in a cluttered Environment
 Drone navigation in a forest-type environment, where the drone detects gaps between tree trunks and passes through them. If an obstacle blocks the path, the drone applies the Velocity Obstacle (VO) method to avoid it and move safely. If no trees are detected for a certain number of frames, the drone initiates landing.
 Autonomous Drone Navigation in Forest Environment
 This project enables a drone to autonomously navigate through a simulated forest environment, avoiding trees using a combination of computer vision for obstacle detection and advanced flight control. The system is designed for use with the PX4-Autopilot and the Gazebo simulator.
